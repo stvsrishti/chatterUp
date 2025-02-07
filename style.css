@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* user prompt for taking name at starting*/
+
+#my-prompt {
+  position: absolute;
+  display: none;
+  top: 35%;
+  left: 25%;
+  width: 30%;
+  height: 20%;
+  background-color: #4e6bbb;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 5px 5px 5px rgb(69 122 126 / 85%);
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CSS for input in form-group */
+.form-group input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#my-prompt button {
+  padding: 10px;
+  margin: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #221a6d;
+  color: #fff;
+}
+
+/* main .container CSS */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* CSS for main heading */
+.chatterup-heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #4166b2;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  text-shadow: 2px 2px 2px rgb(62 79 79 / 80%);
+}
+
+/* CSS for right container start */
+.right-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 25%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user p {
+  margin: 0;
+  font-weight: bold;
+}
+.typing {
+  padding-left: 10%;
+  color: green;
+}
+.online-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  margin-left: auto;
+}
+#count {
+  font-size: large;
+  color: #4caf50;
+}
+
+#welcome {
+  font-size: medium;
+  font-weight: 400;
+  color: #4573ee;
+  width: 100%;
+  margin: 0 !important;
+  padding: 10px;
+  background-color: beige;
+  display: none;
+}
+
+#message-list {
+  width: 100%;
+  height: 65vh;
+  overflow: auto;
+  margin: 0 15px 5px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("./public/images/chat-bg.jpeg");
+  background-size: cover;
+  scrollbar-width: none;
+}
+
+#message-list div:first-child {
+  margin-top: 10px;
+}
+
+/* CSS for left container start */
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  align-items: center;
+  border-top-width: 0 !important;
+  border: 10px solid whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Add new message in left container  */
+#message-form-div {
+  width: 100%;
+}
+#new-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#message-form {
+  display: flex;
+  align-items: center;
+  margin: 5px 5px 10px 5px;
+}
+
+#message-form input[type="text"] {
+  flex: 6;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #3eb069;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: #1f1f64;
+}
+
+/* display message block */
+.message-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  margin-left: 10px;
+}
+
+.message-block-user {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.message-block img {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-block-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-content {
+  float: right;
+  max-width: 90%;
+  min-width: 30%;
+  padding: 15px;
+  background-color: #6dc0dc;
+  border-radius: 7px;
+  position: relative;
+  border-bottom-left-radius: 0;
+  border: 0.2px solid #b0b0f7;
+}
+
+.message-content .message {
+  font-size: 14px;
+  font-weight: 600;
+  font-weight: normal;
+  margin: 0;
+}
+
+.message-content .timestamp {
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 21px;
+  right: 7px;
+}
+
+.message-content .name {
+  font-size: 12px;
+  color: #181313;
+  font-weight: bold;
+  position: absolute;
+  bottom: 16px;
+}
