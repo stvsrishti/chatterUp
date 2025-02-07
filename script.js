@@ -36,7 +36,7 @@ socket.on("onlineUsers", (users) => {
   users.forEach((user) => {
     const newUser = document.createElement("div");
     newUser.innerHTML = `   <div class="user">
-                            <img src="public/images/1.jpg" alt="R">
+                            <img src="public/images/1.png" alt="R">
                             <p>${user.name}</p>
                             <span class="online-dot"></span>
                             <p id="${user.id}" class="typing"><p>
@@ -72,7 +72,7 @@ socket.on("joined", (data) => {
       console.log(map);
       oldmsg.innerHTML = `
             <div class=${divClass} >
-                <img src="public/images/${map.get(message.name)}.jpg" alt="pic">
+                <img src="public/images/${map.get(message.name)}.png" alt="pic">
                 <div class="message-content">
                     <p class="name" style="margin-bottom: 15px;">${
                       message.name
@@ -122,7 +122,7 @@ socket.on("newMessage", (newMessage) => {
   if (newMessage.name == userName.value) {
     msg.innerHTML = `
         <div class="message-block-user">
-            <img src="public/images/1.jpg" alt="pic">
+            <img src="public/images/1.png" alt="pic">
             <div class="message-content" style="background-color: #6b63e1; color: white;">
                 <p class="name" style="color:white; font-weight: bold; margin-bottom: 15px;">${
                   newMessage.name
@@ -135,7 +135,7 @@ socket.on("newMessage", (newMessage) => {
   } else {
     msg.innerHTML = `
         <div class="message-block">
-            <img src="public/images/2.jpg" alt="pic">
+            <img src="public/images/2.png" alt="pic">
             <div class="message-content">
                 <p class="name">${newMessage.name}</p>
                 <p class="message">${newMessage.message}</p>
