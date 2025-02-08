@@ -2,8 +2,8 @@
 const socket = io.connect("http://localhost:3000");
 
 //audio
-var mySound = new Audio("./public/audio/audio.mp3");
-mySound.load();
+var notificationSound = new Audio("./public/audio/audio.mp3");
+notificationSound.load();
 
 // DOM elements
 const myPrompt = document.getElementById("my-prompt");
@@ -28,7 +28,7 @@ myPrompt.addEventListener("submit", (event) => {
 
 // Event: Update online users and old messages
 socket.on("onlineUsers", (users) => {
-  mySound.play();
+  notificationSound.play();
   const onlineUser = document.getElementById("online-user");
   onlineUser.innerHTML = "";
   const count = document.getElementById("count");
@@ -48,7 +48,7 @@ socket.on("onlineUsers", (users) => {
 
 // Event: Display old messages  when loaded from server
 socket.on("joined", (data) => {
-  mySound.play();
+  notificationSound.play();
   const messageList = document.getElementById("message-list");
   const map = new Map();
   let i = 1;
@@ -111,7 +111,7 @@ sendMessage.addEventListener("submit", (e) => {
 
 // Event: Receive and display new message
 socket.on("newMessage", (newMessage) => {
-  mySound.play();
+  notificationSound.play();
   const messageList = document.getElementById("message-list");
   const msg = document.createElement("div");
   const timestamp = new Date(newMessage.time);

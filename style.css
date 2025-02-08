@@ -87,6 +87,8 @@ h2 {
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+  background-color: white;
+  border: 2px solid rgb(144, 144, 241);
 }
 
 .user p {
@@ -127,8 +129,8 @@ h2 {
   overflow: auto;
   margin: 0 15px 5px;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.9)
     ),
     url("./public/images/chat-bg.jpeg");
   background-size: cover;
@@ -216,6 +218,8 @@ button:hover {
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+  background-color: white;
+  border: 2px solid rgb(144, 144, 241);
 }
 
 .message-block-user img {
@@ -223,6 +227,8 @@ button:hover {
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+  background-color: white;
+  border: 2px solid rgb(144, 144, 241);
 }
 
 .message-content {
